@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './modules/login/login.component';
 import { HomeComponent } from './modules/home/home.component';
 import { CartComponent } from './modules/cart/cart.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CartComponent } from './modules/cart/cart.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

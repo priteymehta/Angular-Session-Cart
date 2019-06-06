@@ -1,3 +1,51 @@
-<p>
-  home works!
-</p>
+<div class="container">
+  <div class="col-lg-10 col-md-10 col-xs-12 col-sm-12" style="float: none;margin: 0 auto;margin-top: 50px;">
+      <div class="row">
+          <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 form-group">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">Add Products</h5>
+                      <table class="table table-responsive" style="width:100%">
+                          <tr *ngFor="let item of _arrProduct">
+                              <td>{{item.name}}</td>
+                              <td>{{item.price}}</td>
+                              <td><button class="btn btn-info btn-sm" type="button" (click)="addToCart(item)">Add to
+                                      Cart</button></td>
+                          </tr>
+                      </table>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 form-group">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">Your Cart</h5>
+                      <table class="table table-responsive" style="width:100%">
+                          <tr *ngFor="let item of cartDetails">
+                              <td>{{item.name}}
+                                 <br/> <label style="color:slategrey;font-size: 12px">Qty : {{item.quantity}}</label>
+                              </td>
+                              <td>
+                               Item Total : {{item.price * item.quantity  | number : '3.1-2' }}
+                              </td>
+                              <td>
+                                  <a (click)="removeItem(item)">
+                                          <i class="fa fa-trash"></i>    
+                                  </a>
+                                                     
+                              </td>
+                          </tr>
+                          <footer>
+                              Order Total : {{this.subtotal | number : '3.1-2'}}
+                          </footer>
+                      </table>
+                  </div>
+                  <div class="card-footer">
+                      <a href="#" class="btn btn-primary" style="width:100%">Proceed to checkout</a>
+                      <a class="btn btn-danger" style="width:100%" (click)="clearCart()">Clear Cart</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
