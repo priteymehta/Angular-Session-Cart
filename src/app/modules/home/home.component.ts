@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   _cartDetails: Icart[] = [];
   _cartObj: Icart;
   _subtotal: number = 0;
-  encryptedText: string;
+
   get subtotal(): number {
     this._subtotal = 0;
     if (this._cartDetails != null) {
@@ -38,10 +38,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this._arrProduct = <IProduct[]>JSON.parse(JSON.stringify(productData.default));
-    var normalText = "username123";
-    this.encryptedText = cryptoJs.AES.encrypt(normalText, "key").toString();
-    console.log("encrypted text : " + this.encryptedText);
-    console.log("decypted text : " + cryptoJs.AES.decrypt(this.encryptedText, "key").toString(cryptoJs.enc.Utf8));
   }
 
   addToCart(item: IProduct) {
