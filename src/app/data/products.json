@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "name": "NUSH t-shirt",
+        "price": 350.12,
+        "description": "t-shirt of NUSH brand."
+    },
+    {
+        "id": "2",
+        "name": "NUSH shirt",
+        "price": 700.12,
+        "description": "shirt of NUSH brand."
+    },
+    {
+        "id": "3",
+        "name": "YouWECAN t-shirt",
+        "price": 600.12,
+        "description": "t-shirt of YouWECAN brand."
+    },
+    {
+        "id": "4",
+        "name": "spyker jeans",
+        "price": 1700.12,
+        "description": "jeans of spyker brand."
+    },
+    {
+        "id": "5",
+        "name": "gucci bag",
+        "price": 5000.12,
+        "description": "gucci bag"
+    }
+]
